@@ -1,9 +1,9 @@
 ---
 client: "Mars Petcare — Kinship & AdoptAPet"
 role: "Senior QA Engineer · AI-Driven QA Lead"
-period: "Oct 2023 – Mar 2025"
+period: "Oct 2025 – Mar 2026"
 industry: "MarTech · Consumer"
-summary: "Built a multi-app Playwright framework from scratch covering 6 projects across two Mars Petcare brands. Pioneered AI-driven QA agents that auto-generate test plans, create tests from work items, and self-heal failing suites."
+summary: "Built a multi-app Playwright framework from scratch covering 6 projects across two Mars Petcare brands (Kinship US/UK and AdoptAPet). Pioneered AI-driven QA agents that auto-generate test plans, create tests from work items, and self-heal failing suites."
 metrics:
   - label: "Automated tests"
     value: "1000+"

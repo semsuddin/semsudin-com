@@ -3,13 +3,12 @@
 // Deliberately using text (not logos) to stay on-brand editorial and avoid
 // trademark/permission concerns. Logos can be swapped in later in /public/logos.
 const companies = [
-  { name: 'Alfa Laval', role: 'Alva AI Platform' },
-  { name: 'Mars Petcare', role: 'Kinship · AdoptAPet' },
-  { name: 'APCOA', role: 'Core QA Transformation' },
-  { name: 'ERS', role: 'Test Automation Architect' },
-  { name: 'System Verification', role: 'Tech Lead · 50+ eng' },
-  { name: 'Authority Partners', role: 'Test Automation Eng' },
-  { name: 'Andela', role: 'Vetted network' },
+  { name: 'Alfa Laval', role: 'Alva GenAI Platform · 7 yrs, 4 projects' },
+  { name: 'Mars Petcare', role: 'Kinship · AdoptAPet · AI-driven QA' },
+  { name: 'APCOA Group', role: 'QA Transformation Lead' },
+  { name: 'ERS', role: 'Test Automation Architect · Core + Cyprus' },
+  { name: 'SPACE Sweden', role: 'Foundational automation · Gaming' },
+  { name: 'Qafana', role: 'CTO · Founder' },
 ];
 ---
 
@@ -21,7 +20,7 @@ const companies = [
     </div>
 
     <!-- Editorial logo wall — names as typography -->
-    <div class="grid grid-cols-2 gap-px overflow-hidden border border-[var(--color-rule)] bg-[var(--color-rule)] md:grid-cols-4 lg:grid-cols-7">
+    <div class="grid grid-cols-2 gap-px overflow-hidden border border-[var(--color-rule)] bg-[var(--color-rule)] md:grid-cols-3 lg:grid-cols-6">
       {companies.map((c) => (
         <div class="group flex flex-col justify-between gap-3 bg-[var(--color-paper)] p-5 transition-colors hover:bg-[var(--color-paper-dim)]">
           <p class="font-serif text-lg md:text-xl leading-tight text-[var(--color-ink)] transition-colors group-hover:text-[var(--color-amber)]">
