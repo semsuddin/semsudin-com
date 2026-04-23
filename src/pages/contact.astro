@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<BaseLayout title="Contact — Semsudin Sefić" description="Book a 30-minute call, or send a brief and I'll respond within 24 hours.">
+  <section class="border-b border-[var(--color-rule)]">
+    <div class="mx-auto max-w-[1400px] px-6 pt-20 pb-12 lg:px-12 lg:pt-28 lg:pb-16">
+      <div class="grid grid-cols-12 gap-6 lg:gap-12">
+        <div class="col-span-12 md:col-span-4 lg:col-span-3">
+          <p class="index-num">§ Contact</p>
+          <p class="eyebrow-amber mt-4">Two paths</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 lg:col-span-9">
+          <h1 class="display text-5xl md:text-7xl lg:text-[7rem] leading-[0.95]">
+            Let's find out if <span class="italic text-[var(--color-amber)]">we fit.</span>
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)]">
+            Book a 30-minute call for the fastest path, or send a written brief if you'd rather think it through first.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Contact />
+</BaseLayout>

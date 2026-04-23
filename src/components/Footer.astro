@@ -1,0 +1,71 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-32 border-t border-[var(--color-ink)] bg-[var(--color-ink)] text-[var(--color-paper)]">
+  <div class="mx-auto max-w-[1400px] px-6 py-16 lg:px-12">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8">
+      <!-- Brand -->
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-3">
+          <span class="inline-block h-2 w-2 rounded-full bg-[var(--color-amber)]"></span>
+          <span class="font-mono text-sm">
+            <span class="font-semibold">semsudin</span><span class="opacity-60">.com</span>
+          </span>
+        </div>
+        <p class="display mt-6 text-4xl md:text-5xl">
+          Let's ship the next one <span class="text-[var(--color-signal)] italic">together.</span>
+        </p>
+        <p class="mt-6 max-w-md text-[var(--color-paper)]/70">
+          Enterprise GenAI that actually ships to production. Fractional CTO, architect-for-hire, or hands-on build.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://calendly.com/sefic91/30min" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-[var(--color-amber)] bg-[var(--color-amber)] px-5 py-3 font-mono text-[0.82rem] uppercase tracking-wider text-[var(--color-paper)] transition-colors hover:bg-[var(--color-amber-dark)]">
+            Book 30 min → Calendly
+          </a>
+          <a href="mailto:sefic91@gmail.com" class="inline-flex items-center gap-2 border border-[var(--color-paper)]/30 px-5 py-3 font-mono text-[0.82rem] uppercase tracking-wider text-[var(--color-paper)] transition-colors hover:border-[var(--color-paper)] hover:bg-[var(--color-paper)] hover:text-[var(--color-ink)]">
+            sefic91@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav cols -->
+      <div class="md:col-span-2 md:col-start-7">
+        <p class="font-mono text-[0.72rem] uppercase tracking-wider text-[var(--color-signal)]">Navigate</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="/" class="text-[var(--color-paper)]/80 hover:text-[var(--color-paper)]">Index</a></li>
+          <li><a href="/work" class="text-[var(--color-paper)]/80 hover:text-[var(--color-paper)]">Work</a></li>
+          <li><a href="/blog" class="text-[var(--color-paper)]/80 hover:text-[var(--color-paper)]">Field Notes</a></li>
+          <li><a href="/about" class="text-[var(--color-paper)]/80 hover:text-[var(--color-paper)]">About</a></li>
+          <li><a href="/contact" class="text-[var(--color-paper)]/80 hover:text-[var(--color-paper)]">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <p class="font-mono text-[0.72rem] uppercase tracking-wider text-[var(--color-signal)]">Elsewhere</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="https://www.linkedin.com/in/semsuddin" target="_blank" rel="noopener" class="text-[var(--color-paper)]/80 hover:text-[var(--color-paper)]">LinkedIn ↗</a></li>
+          <li><a href="https://github.com/semsuddin" target="_blank" rel="noopener" class="text-[var(--color-paper)]/80 hover:text-[var(--color-paper)]">GitHub ↗</a></li>
+          <li><a href="https://qafana.com" target="_blank" rel="noopener" class="text-[var(--color-paper)]/80 hover:text-[var(--color-paper)]">Qafana ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <p class="font-mono text-[0.72rem] uppercase tracking-wider text-[var(--color-signal)]">Based in</p>
+        <p class="mt-4 text-sm text-[var(--color-paper)]/80">
+          Sarajevo, Bosnia & Herzegovina<br />
+          GMT+2 · Working globally
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col justify-between gap-4 border-t border-[var(--color-paper)]/10 pt-8 md:flex-row md:items-center">
+      <p class="font-mono text-xs text-[var(--color-paper)]/50">
+        © {year} Šemsudin Sefić. All rights reserved.
+      </p>
+      <p class="font-mono text-xs text-[var(--color-paper)]/50">
+        Built with Astro · Deployed on Cloudflare
+      </p>
+    </div>
+  </div>
+</footer>

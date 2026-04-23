@@ -1,0 +1,188 @@
+---
+// Contact — two tracks: instant-book via Calendly, or async via form.
+---
+
+<section id="contact" class="bg-[var(--color-paper-dim)]">
+  <div class="mx-auto max-w-[1400px] px-6 py-20 lg:px-12 lg:py-28">
+    <div class="mb-12 grid grid-cols-12 gap-6 border-b border-[var(--color-ink)] pb-8 lg:gap-12">
+      <div class="col-span-12 md:col-span-4 lg:col-span-3">
+        <p class="index-num">§ 005 — Contact</p>
+        <p class="eyebrow-amber mt-4">Let's talk</p>
+      </div>
+      <div class="col-span-12 md:col-span-8 lg:col-span-9">
+        <h2 class="display text-4xl md:text-5xl lg:text-6xl leading-[1]">
+          Got an AI platform <span class="italic text-[var(--color-amber)]">to ship?</span>
+        </h2>
+        <p class="mt-4 max-w-2xl text-[var(--color-ink-muted)] text-lg">
+          Whether you need a fractional CTO, a multi-agent architecture review, an enterprise QA transformation, or hands-on implementation — pick the fastest path.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12">
+      <!-- Calendly — primary CTA -->
+      <div class="lg:col-span-7 border border-[var(--color-ink)] bg-[var(--color-paper)]">
+        <div class="flex items-center justify-between gap-4 border-b border-[var(--color-ink)] bg-[var(--color-ink)] px-6 py-3 text-[var(--color-paper)]">
+          <p class="font-mono text-[0.72rem] uppercase tracking-wider">
+            <span class="text-[var(--color-amber)]">→</span> Option A · Book instantly
+          </p>
+          <p class="font-mono text-[0.72rem] uppercase tracking-wider text-[var(--color-paper)]/60">
+            30 min · Free
+          </p>
+        </div>
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/sefic91/30min?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=c8542c"
+          style="min-width:320px;height:680px;"
+        ></div>
+      </div>
+
+      <!-- Form — secondary -->
+      <div class="lg:col-span-5">
+        <div class="border border-[var(--color-ink)] bg-[var(--color-paper)]">
+          <div class="flex items-center justify-between gap-4 border-b border-[var(--color-ink)] bg-[var(--color-ink)] px-6 py-3 text-[var(--color-paper)]">
+            <p class="font-mono text-[0.72rem] uppercase tracking-wider">
+              <span class="text-[var(--color-amber)]">→</span> Option B · Send a brief
+            </p>
+            <p class="font-mono text-[0.72rem] uppercase tracking-wider text-[var(--color-paper)]/60">
+              Async · &lt; 24h
+            </p>
+          </div>
+
+          <form
+            id="contact-form"
+            action="/api/contact"
+            method="POST"
+            class="space-y-5 p-6"
+          >
+            <div>
+              <label for="name" class="eyebrow block">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                autocomplete="name"
+                class="mt-2 w-full border-b border-[var(--color-rule)] bg-transparent py-2 text-[var(--color-ink)] focus:border-[var(--color-amber)] focus:outline-none"
+              />
+            </div>
+            <div>
+              <label for="email" class="eyebrow block">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                class="mt-2 w-full border-b border-[var(--color-rule)] bg-transparent py-2 text-[var(--color-ink)] focus:border-[var(--color-amber)] focus:outline-none"
+              />
+            </div>
+            <div>
+              <label for="company" class="eyebrow block">Company (optional)</label>
+              <input
+                id="company"
+                name="company"
+                type="text"
+                autocomplete="organization"
+                class="mt-2 w-full border-b border-[var(--color-rule)] bg-transparent py-2 text-[var(--color-ink)] focus:border-[var(--color-amber)] focus:outline-none"
+              />
+            </div>
+            <div>
+              <label for="engagement" class="eyebrow block">Engagement type</label>
+              <select
+                id="engagement"
+                name="engagement"
+                class="mt-2 w-full border-b border-[var(--color-rule)] bg-transparent py-2 text-[var(--color-ink)] focus:border-[var(--color-amber)] focus:outline-none"
+              >
+                <option value="ai-architecture">AI architecture / multi-agent system</option>
+                <option value="fractional-cto">Fractional CTO</option>
+                <option value="qa-transformation">AI-driven QA transformation</option>
+                <option value="devops">DevOps / CI-CD</option>
+                <option value="advisory">Advisory / one-off review</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="eyebrow block">What are you building?</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                class="mt-2 w-full border-b border-[var(--color-rule)] bg-transparent py-2 text-[var(--color-ink)] focus:border-[var(--color-amber)] focus:outline-none resize-none"
+              ></textarea>
+            </div>
+            <!-- honeypot -->
+            <div class="hidden" aria-hidden="true">
+              <label>Do not fill <input name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+
+            <button type="submit" class="btn-primary w-full justify-center">
+              Send brief <span aria-hidden="true">→</span>
+            </button>
+
+            <p id="form-status" class="hidden font-mono text-xs"></p>
+          </form>
+        </div>
+
+        <!-- Fast facts -->
+        <div class="mt-6 border border-[var(--color-rule)] bg-[var(--color-paper)] p-6">
+          <p class="eyebrow-amber">Quick facts</p>
+          <dl class="mt-4 space-y-3">
+            <div class="flex items-baseline justify-between gap-4 border-b border-[var(--color-rule)] pb-3">
+              <dt class="font-mono text-xs uppercase tracking-wider text-[var(--color-ink-muted)]">Location</dt>
+              <dd class="text-sm">Sarajevo, BiH · GMT+2</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4 border-b border-[var(--color-rule)] pb-3">
+              <dt class="font-mono text-xs uppercase tracking-wider text-[var(--color-ink-muted)]">Engagement</dt>
+              <dd class="text-sm">Full-time · Contract · Fractional</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4 border-b border-[var(--color-rule)] pb-3">
+              <dt class="font-mono text-xs uppercase tracking-wider text-[var(--color-ink-muted)]">Response</dt>
+              <dd class="text-sm">&lt; 24 hours</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-4">
+              <dt class="font-mono text-xs uppercase tracking-wider text-[var(--color-ink-muted)]">Email</dt>
+              <dd class="text-sm">
+                <a href="mailto:sefic91@gmail.com" class="text-[var(--color-amber)] underline underline-offset-2">sefic91@gmail.com</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Calendly widget script -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const status = document.getElementById('form-status');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!status) return;
+    status.classList.remove('hidden');
+    status.style.color = 'var(--color-ink-muted)';
+    status.textContent = 'Sending...';
+
+    const data = new FormData(form);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        body: JSON.stringify(Object.fromEntries(data)),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (!res.ok) throw new Error('Request failed');
+      status.style.color = 'var(--color-moss)';
+      status.textContent = '✓ Received. Expect a reply within 24 hours.';
+      form.reset();
+    } catch (err) {
+      status.style.color = 'var(--color-amber)';
+      status.textContent = '× Something broke. Please email sefic91@gmail.com directly.';
+    }
+  });
+</script>

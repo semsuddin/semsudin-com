@@ -1,0 +1,116 @@
+---
+const categories = [
+  {
+    title: 'AI & Agents',
+    color: 'amber',
+    items: [
+      'LlamaIndex',
+      'FastAPI',
+      'Azure OpenAI',
+      'Anthropic Claude',
+      'OpenAI GPT-4o',
+      'Mistral',
+      'pgvector',
+      'Tavily',
+      'FLUX',
+      'ReAct agents',
+      'RAG',
+      'Streaming LLM',
+    ],
+  },
+  {
+    title: 'QA & Testing',
+    color: 'moss',
+    items: [
+      'Playwright',
+      'Cypress',
+      'Selenium',
+      'Appium',
+      'JMeter',
+      'LoadRunner',
+      'ISTQB AI Testing',
+      'OWASP scans',
+      'Self-healing tests',
+      'AI test generation',
+      'xUnit',
+      'pytest',
+    ],
+  },
+  {
+    title: 'DevOps & Infra',
+    color: 'ink',
+    items: [
+      'Azure DevOps',
+      'GitHub Actions',
+      'Jenkins',
+      'Bicep IaC',
+      'Docker',
+      'Azure App Service',
+      'Azure Functions',
+      'ACR',
+      'Application Insights',
+      'OpenTelemetry',
+      'Cloudflare',
+      'AWS Lambda',
+    ],
+  },
+  {
+    title: 'Backend & Data',
+    color: 'ink-muted',
+    items: [
+      'C# / .NET 8',
+      'Python 3.12',
+      'TypeScript',
+      'Node.js',
+      'React',
+      'PostgreSQL',
+      'SQL Server',
+      'EF Core',
+      'Clean Architecture',
+      'REST · gRPC',
+      'Azure AD auth',
+      'Auth0',
+    ],
+  },
+];
+---
+
+<section class="border-b border-[var(--color-rule)]">
+  <div class="mx-auto max-w-[1400px] px-6 py-20 lg:px-12 lg:py-28">
+    <div class="mb-12 grid grid-cols-12 gap-6 border-b border-[var(--color-rule)] pb-8 lg:gap-12">
+      <div class="col-span-12 md:col-span-4 lg:col-span-3">
+        <p class="index-num">§ 004 — Toolbox</p>
+        <p class="eyebrow-amber mt-4">Stack</p>
+      </div>
+      <div class="col-span-12 md:col-span-8 lg:col-span-9">
+        <h2 class="display text-4xl md:text-5xl lg:text-6xl leading-[1]">
+          Not every tool. <span class="italic">The right ones.</span>
+        </h2>
+        <p class="mt-4 max-w-2xl text-[var(--color-ink-muted)]">
+          Eleven years of language-hopping and framework-chasing distilled into the stack I actually reach for when the stakes are real.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-px border border-[var(--color-rule)] bg-[var(--color-rule)] md:grid-cols-2 lg:grid-cols-4">
+      {categories.map((cat, i) => (
+        <div class="bg-[var(--color-paper)] p-8">
+          <div class="flex items-center gap-3 border-b border-[var(--color-rule)] pb-3">
+            <span class="index-num">0{i + 1}</span>
+            <p class="font-mono text-[0.72rem] uppercase tracking-[0.16em] text-[var(--color-ink)]">
+              {cat.title}
+            </p>
+          </div>
+          <ul class="mt-5 space-y-1">
+            {cat.items.map((item) => (
+              <li class="flex items-baseline gap-2 font-mono text-[0.82rem] text-[var(--color-ink)]">
+                <span class="text-[var(--color-amber)] opacity-60">·</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

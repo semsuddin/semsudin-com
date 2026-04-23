@@ -1,0 +1,83 @@
+---
+const pillars = [
+  {
+    num: '01',
+    title: 'AI Systems Architecture',
+    subtitle: 'Multi-agent platforms that survive production.',
+    body: 'ReAct agents on LlamaIndex, 10+ LLMs orchestrated through a single interface, full RAG with document parsing, chunking, pgvector. End-to-end streaming. Proper observability via OpenTelemetry. The architecture decisions that separate a cool demo from a system your ops team doesn\'t hate.',
+    tags: ['LlamaIndex', 'FastAPI', 'RAG', 'pgvector', 'Azure OpenAI', 'Multi-LLM'],
+    proof: 'Shipped Alva at Alfa Laval — React UI, .NET 8 orchestrator, Python agent, 10+ LLMs.',
+  },
+  {
+    num: '02',
+    title: 'AI-Driven QA',
+    subtitle: 'Tests that write themselves, heal themselves, and ship themselves.',
+    body: 'Custom AI agents that auto-generate test plans from UI exploration, create Playwright tests from tickets, self-heal failing tests, and move tickets through the pipeline. Integrated into the dev cycle to catch regressions, OWASP top-10 vulns, and performance bottlenecks — before QA even touches them.',
+    tags: ['Playwright', 'AI Agents', 'ISTQB AI Testing', 'Self-healing', 'Security scans'],
+    proof: '1000+ tests across 6 Mars Petcare apps. Authenticated test pass rate 20% → 100%.',
+  },
+  {
+    num: '03',
+    title: 'Enterprise DevOps',
+    subtitle: 'CI/CD pipelines that do the right thing by default.',
+    body: 'Unified pipelines across 7 services with smart change detection and parallel deploys. Prod container registry isolation via image promotion. Bicep IaC with RBAC that actually works. Consolidated coverage reporting across .NET and Python. The boring infrastructure that makes the exciting stuff possible.',
+    tags: ['Azure DevOps', 'GitHub Actions', 'Bicep', 'Docker', 'Clean Architecture'],
+    proof: 'System Verification — 300% stability gain, 750% faster test execution. Alva — unified 7-service pipeline.',
+  },
+];
+---
+
+<section id="pillars" class="border-b border-[var(--color-rule)]">
+  <div class="mx-auto max-w-[1400px] px-6 py-20 lg:px-12 lg:py-28">
+    <!-- Section header -->
+    <div class="mb-16 grid grid-cols-12 gap-6 border-b border-[var(--color-rule)] pb-8 lg:gap-12">
+      <div class="col-span-12 md:col-span-4 lg:col-span-3">
+        <p class="index-num">§ 002 — Services</p>
+        <p class="eyebrow-amber mt-4">What I do</p>
+      </div>
+      <div class="col-span-12 md:col-span-8 lg:col-span-9">
+        <h2 class="display text-4xl md:text-5xl lg:text-6xl leading-[1]">
+          Three pillars. <span class="italic">One thing:</span> <br class="hidden md:inline" />
+          AI systems that ship, and stay shipped.
+        </h2>
+      </div>
+    </div>
+
+    <!-- Pillars list -->
+    <div class="divide-y divide-[var(--color-rule)]">
+      {pillars.map((p, i) => (
+        <div class="group grid grid-cols-12 gap-6 py-10 lg:gap-12 lg:py-14">
+          <div class="col-span-12 md:col-span-2 lg:col-span-2">
+            <p class="display text-6xl text-[var(--color-ink-faded)] transition-colors group-hover:text-[var(--color-amber)] md:text-7xl">
+              {p.num}
+            </p>
+          </div>
+
+          <div class="col-span-12 md:col-span-5 lg:col-span-4">
+            <h3 class="display text-3xl md:text-4xl leading-tight">{p.title}</h3>
+            <p class="mt-3 font-serif italic text-[var(--color-ink-muted)] text-lg md:text-xl">
+              {p.subtitle}
+            </p>
+          </div>
+
+          <div class="col-span-12 md:col-span-5 lg:col-span-6">
+            <p class="text-[var(--color-ink)] leading-relaxed">
+              {p.body}
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              {p.tags.map((t) => (
+                <span class="border border-[var(--color-rule)] bg-[var(--color-paper-dim)] px-2.5 py-1 font-mono text-[0.72rem] text-[var(--color-ink-muted)]">
+                  {t}
+                </span>
+              ))}
+            </div>
+            <p class="mt-5 flex gap-3 border-l-2 border-[var(--color-amber)] pl-4 font-mono text-[0.82rem] text-[var(--color-ink-muted)]">
+              <span class="font-semibold uppercase tracking-wider text-[var(--color-amber)]">Proof</span>
+              {p.proof}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

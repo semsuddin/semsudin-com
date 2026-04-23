@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const milestones = [
+  { year: '2014', what: 'ISTQB Foundation. QA Engineer @ Authority Partners.' },
+  { year: '2016', what: 'Test Automation Engineer. Shipped frameworks for a multi-billion-dollar real estate platform.' },
+  { year: '2018', what: 'Joined System Verification. Started scaling from IC to lead.' },
+  { year: '2019', what: 'Foundational automation suites for a space-themed gaming platform (SPACE Sweden).' },
+  { year: '2021', what: 'Senior SDET on Alfa Laval OneIB. Built the C# / Playwright scaffold later used cross-project.' },
+  { year: '2022', what: 'Certified SAFe 5 Agilist. C# LinkedIn assessment top 5%.' },
+  { year: '2023', what: 'Lead QA @ APCOA core project — microservices QA transformation. Founded Qafana.' },
+  { year: '2024', what: 'Architect on Alva / Alfabeta at Alfa Laval — production multi-agent AI platform.' },
+  { year: '2025', what: 'AI-driven QA at Mars Petcare. ISTQB AI Testing cert. GitHub Copilot cert.' },
+  { year: '2026', what: 'You, reading this.' },
+];
+
+const certs = [
+  { title: 'ISTQB AI Testing', year: 'Jul 2025', issuer: 'ISTQB' },
+  { title: 'GitHub Copilot', year: 'Sep 2025', issuer: 'GitHub' },
+  { title: 'Certified SAFe 5 Agilist', year: '2021', issuer: 'Scaled Agile' },
+  { title: 'MCS: Programming in HTML5/JS/CSS3', year: '2017', issuer: 'Microsoft' },
+  { title: 'ISTQB Foundation Level', year: '2014', issuer: 'BCS' },
+];
+---
+
+<BaseLayout title="About — Semsudin Sefić" description="Eleven years from QA engineer to AI systems architect. Based in Sarajevo, working globally.">
+  <section class="border-b border-[var(--color-rule)]">
+    <div class="mx-auto max-w-[1400px] px-6 pt-20 pb-12 lg:px-12 lg:pt-28 lg:pb-16">
+      <div class="grid grid-cols-12 gap-6 lg:gap-12">
+        <div class="col-span-12 md:col-span-4 lg:col-span-3">
+          <p class="index-num">§ About</p>
+          <p class="eyebrow-amber mt-4">Curriculum · expanded</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 lg:col-span-9">
+          <h1 class="display text-5xl md:text-7xl lg:text-[7rem] leading-[0.95]">
+            Eleven years <span class="italic text-[var(--color-amber)]">ago</span> <br />
+            I started testing software.
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg text-[var(--color-ink-muted)] leading-relaxed">
+            Now I architect AI systems that test themselves. Everything in between is why clients trust what I build.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio + portrait -->
+  <section class="border-b border-[var(--color-rule)]">
+    <div class="mx-auto max-w-[1400px] px-6 py-20 lg:px-12 lg:py-28">
+      <div class="grid grid-cols-12 gap-6 lg:gap-12">
+        <div class="col-span-12 lg:col-span-4">
+          <div class="aspect-square border border-[var(--color-ink)] overflow-hidden relative bg-[var(--color-paper-dim)]">
+            <img
+              src="/portrait.jpg"
+              alt="Semsudin Sefić"
+              class="h-full w-full object-cover"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <div class="hidden h-full w-full flex-col items-center justify-center gap-2 p-8 text-center" aria-hidden="true">
+              <p class="display text-7xl text-[var(--color-amber)]">ŠS</p>
+              <p class="font-mono text-xs text-[var(--color-ink-muted)]">Portrait pending upload</p>
+            </div>
+          </div>
+          <p class="eyebrow mt-4">Sarajevo, BiH · GMT+2</p>
+        </div>
+
+        <div class="col-span-12 lg:col-span-8">
+          <p class="eyebrow-amber">Bio</p>
+          <div class="mt-4 space-y-5 text-lg leading-relaxed text-[var(--color-ink)]">
+            <p>
+              I'm Šemsudin — most people write it "Semsudin" — a Sarajevo-based AI Systems Architect and Principal QA/DevOps engineer. Eleven years in, I've specialized in the narrow band where <em class="font-serif text-[var(--color-amber)]">AI ambition meets production reality</em>.
+            </p>
+            <p>
+              I started in QA at Authority Partners. Stabilized legacy automation at System Verification and ended up leading QA delivery across 50+ engineers. Joined Alfa Laval as an SDET and grew into architect of their GenAI platform — a multi-agent system orchestrating 10+ LLMs across tool-use, RAG, and streaming chat. Somewhere in there I shipped 1000+ tests at Mars Petcare and pioneered AI agents that author and self-heal test suites.
+            </p>
+            <p>
+              The through-line: I don't just build things. I build things that survive the transition to production, to ops, to the next engineer on the team. The QA brain is the secret weapon.
+            </p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-[var(--color-rule)] bg-[var(--color-rule)] md:grid-cols-2">
+            <div class="bg-[var(--color-paper)] p-6">
+              <p class="eyebrow-amber">Education</p>
+              <p class="mt-3 font-serif text-xl">MSc Computer Science</p>
+              <p class="font-mono text-xs text-[var(--color-ink-muted)]">University of Sarajevo · 2022</p>
+              <p class="mt-3 font-serif text-xl">BSc Electrical Engineering</p>
+              <p class="font-mono text-xs text-[var(--color-ink-muted)]">University of Sarajevo · 2016</p>
+            </div>
+            <div class="bg-[var(--color-paper)] p-6">
+              <p class="eyebrow-amber">Languages</p>
+              <ul class="mt-3 space-y-1 text-[0.95rem]">
+                <li><span class="font-mono text-[var(--color-amber)]">→</span> Bosnian — native</li>
+                <li><span class="font-mono text-[var(--color-amber)]">→</span> English — professional</li>
+                <li><span class="font-mono text-[var(--color-amber)]">→</span> German — working</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="border-b border-[var(--color-rule)]">
+    <div class="mx-auto max-w-[1400px] px-6 py-20 lg:px-12 lg:py-28">
+      <div class="mb-12 grid grid-cols-12 gap-6 border-b border-[var(--color-rule)] pb-8 lg:gap-12">
+        <div class="col-span-12 md:col-span-4 lg:col-span-3">
+          <p class="index-num">§ Timeline</p>
+          <p class="eyebrow-amber mt-4">The arc</p>
+        </div>
+        <div class="col-span-12 md:col-span-8 lg:col-span-9">
+          <h2 class="display text-4xl md:text-5xl lg:text-6xl leading-[1]">
+            From test cases to <span class="italic">multi-agent systems.</span>
+          </h2>
+        </div>
+      </div>
+
+      <ol class="divide-y divide-[var(--color-rule)] border-y border-[var(--color-rule)]">
+        {milestones.map((m) => (
+          <li class="grid grid-cols-12 gap-4 py-6 lg:gap-12">
+            <span class="col-span-3 md:col-span-2 lg:col-span-1 display text-3xl md:text-4xl text-[var(--color-amber)]">
+              {m.year}
+            </span>
+            <span class="col-span-9 md:col-span-10 lg:col-span-11 self-center text-lg leading-relaxed text-[var(--color-ink)]">
+              {m.what}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Certs -->
+  <section class="border-b border-[var(--color-rule)] bg-[var(--color-paper-dim)]">
+    <div class="mx-auto max-w-[1400px] px-6 py-16 lg:px-12 lg:py-20">
+      <div class="mb-8 flex flex-wrap items-baseline justify-between gap-4 border-b border-[var(--color-rule)] pb-4">
+        <p class="eyebrow-amber">Certifications</p>
+        <p class="font-mono text-xs text-[var(--color-ink-muted)]">Continuously earned since 2014</p>
+      </div>
+      <ul class="grid grid-cols-1 gap-px border border-[var(--color-rule)] bg-[var(--color-rule)] md:grid-cols-2 lg:grid-cols-5">
+        {certs.map((c) => (
+          <li class="bg-[var(--color-paper)] p-5">
+            <p class="font-serif text-lg leading-tight">{c.title}</p>
+            <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-[var(--color-ink-muted)]">
+              {c.issuer} · {c.year}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

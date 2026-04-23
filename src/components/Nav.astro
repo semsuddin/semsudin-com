@@ -1,0 +1,85 @@
+---
+const pathname = Astro.url.pathname;
+const links = [
+  { href: '/', label: 'Index', match: /^\/$/ },
+  { href: '/work', label: 'Work', match: /^\/work/ },
+  { href: '/blog', label: 'Field Notes', match: /^\/blog/ },
+  { href: '/about', label: 'About', match: /^\/about/ },
+  { href: '/contact', label: 'Contact', match: /^\/contact/ },
+];
+---
+
+<header class="sticky top-0 z-40 border-b border-[var(--color-rule)] bg-[var(--color-paper)]/85 backdrop-blur-md">
+  <nav class="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 lg:px-12">
+    <a href="/" class="group flex items-center gap-3">
+      <span class="terminal-dot"></span>
+      <span class="font-mono text-sm tracking-tight">
+        <span class="font-semibold text-[var(--color-ink)]">semsudin</span><span class="text-[var(--color-ink-faded)]">.com</span>
+      </span>
+    </a>
+
+    <ul class="hidden items-center gap-1 md:flex">
+      {links.map((link, i) => {
+        const active = link.match.test(pathname);
+        return (
+          <li class="flex items-center">
+            <a
+              href={link.href}
+              class:list={[
+                'px-3 py-1.5 font-mono text-[0.78rem] uppercase tracking-wider transition-colors',
+                active
+                  ? 'text-[var(--color-amber)]'
+                  : 'text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]',
+              ]}
+            >
+              <span class="mr-1.5 text-[var(--color-ink-faded)]">0{i + 1}</span>
+              {link.label}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+
+    <a href="/contact" class="btn-primary hidden lg:inline-flex">
+      Book a call
+      <span aria-hidden="true">→</span>
+    </a>
+
+    <button
+      id="mobile-menu-toggle"
+      class="flex flex-col gap-1 md:hidden"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+    >
+      <span class="block h-[1.5px] w-6 bg-[var(--color-ink)]"></span>
+      <span class="block h-[1.5px] w-6 bg-[var(--color-ink)]"></span>
+      <span class="block h-[1.5px] w-4 bg-[var(--color-ink)]"></span>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden border-t border-[var(--color-rule)] md:hidden">
+    <ul class="px-6 py-4">
+      {links.map((link, i) => (
+        <li class="border-b border-[var(--color-rule)] last:border-0">
+          <a
+            href={link.href}
+            class="flex items-center gap-3 py-3 font-mono text-sm uppercase tracking-wider text-[var(--color-ink)]"
+          >
+            <span class="text-[var(--color-ink-faded)]">0{i + 1}</span>
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    menu?.classList.toggle('hidden');
+  });
+</script>

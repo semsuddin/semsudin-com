@@ -1,0 +1,87 @@
+---
+// Hero — editorial magazine meets IDE. Intentionally asymmetric.
+const stats = [
+  { value: '11yrs', label: 'In the field' },
+  { value: '50+', label: 'Engineers led' },
+  { value: '1000+', label: 'Tests shipped' },
+  { value: '750%', label: 'Pipeline speed-up' },
+];
+---
+
+<section class="relative overflow-hidden border-b border-[var(--color-rule)]">
+  <div class="pointer-events-none absolute inset-0 opacity-[0.35] grid-lines"></div>
+
+  <div class="relative mx-auto max-w-[1400px] px-6 pt-16 pb-24 lg:px-12 lg:pt-24 lg:pb-32">
+    <!-- Masthead row -->
+    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-[var(--color-ink)] pb-4 mb-12 lg:mb-16">
+      <div class="flex items-center gap-4">
+        <span class="terminal-dot"></span>
+        <span class="font-mono text-[0.72rem] uppercase tracking-[0.2em] text-[var(--color-ink-muted)]">
+          Issue 01 · Sarajevo → Global
+        </span>
+      </div>
+      <div class="flex items-center gap-4 font-mono text-[0.72rem] uppercase tracking-[0.2em] text-[var(--color-ink-muted)]">
+        <span>Available for select engagements</span>
+        <span class="hidden h-2 w-2 rounded-full bg-[var(--color-moss)] sm:inline-block"></span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-6 lg:gap-12">
+      <div class="col-span-12 md:col-span-4 lg:col-span-3">
+        <p class="index-num">§ 001 — Introduction</p>
+        <p class="eyebrow-amber mt-4">Semsudin Sefić</p>
+        <p class="font-mono text-[0.82rem] text-[var(--color-ink-muted)] mt-1">
+          AI Systems Architect<br />
+          Principal QA &amp; DevOps
+        </p>
+      </div>
+
+      <div class="col-span-12 md:col-span-8 lg:col-span-9">
+        <h1 class="display text-[2.75rem] sm:text-[3.75rem] md:text-[5rem] lg:text-[6.5rem] leading-[0.92]">
+          I ship <span class="italic text-[var(--color-amber)]">production-grade</span> AI systems <br class="hidden md:inline" />
+          that <span class="italic">actually</span> work.
+        </h1>
+
+        <div class="mt-10 grid grid-cols-12 gap-6 lg:gap-12">
+          <div class="col-span-12 lg:col-span-7">
+            <p class="text-lg md:text-xl text-[var(--color-ink-muted)] leading-relaxed">
+              Multi-agent platforms, enterprise RAG, and the DevOps discipline to keep them standing. Eleven years turning prototypes into systems CTOs actually trust.
+            </p>
+          </div>
+
+          <div class="col-span-12 lg:col-span-5 lg:border-l lg:border-[var(--color-rule)] lg:pl-8">
+            <p class="eyebrow">Currently building</p>
+            <ul class="mt-3 space-y-1.5 font-mono text-sm text-[var(--color-ink)]">
+              <li class="flex gap-2"><span class="text-[var(--color-amber)]">→</span> Alva multi-agent platform @ Alfa Laval</li>
+              <li class="flex gap-2"><span class="text-[var(--color-amber)]">→</span> AI-driven QA agents @ Mars Petcare</li>
+              <li class="flex gap-2"><span class="text-[var(--color-amber)]">→</span> CTO @ Qafana.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-wrap items-center gap-4">
+          <a href="/contact" class="btn-primary">
+            Book a call <span aria-hidden="true">→</span>
+          </a>
+          <a href="/work" class="btn-ghost">
+            See the work
+          </a>
+          <span class="mono-tag hidden sm:inline-flex items-center gap-2">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-[var(--color-moss)]"></span>
+            Typically responds in &lt; 24h
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats row — framed in ink, cells on paper -->
+    <div class="mt-20 grid grid-cols-2 gap-px overflow-hidden border border-[var(--color-ink)] bg-[var(--color-ink)] md:grid-cols-4">
+      {stats.map((s) => (
+        <div class="bg-[var(--color-paper)] p-7">
+          <p class="display text-5xl md:text-6xl">{s.value}</p>
+          <p class="eyebrow mt-2">{s.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
