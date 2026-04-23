@@ -32,3 +32,6 @@ pnpm-debug.log*
 .fseventsd/
 .Spotlight-V100/
 .Trashes
+
+# playbook build artifacts
+src/playbook/.preview.html
