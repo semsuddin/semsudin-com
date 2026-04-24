@@ -16,7 +16,7 @@ It's not loyalty. Enterprises are ruthless about vendor decisions. Every project
 
 It's not price. I am not the cheapest person they could hire.
 
-It's not being local. I'm in Sarajevo. They're in Sweden. Half the meetings are async.
+It's not being local. I'm in Sarajevo. They're across the globe. Half the meetings are async.
 
 It's not a contract lock-in. Every engagement has been a discrete scope of work with a clean exit.
 

@@ -8,7 +8,7 @@ Goal: keep the blog fresh without Semsudin manually writing every post, while ke
 
 ### Architecture
 
-```
+```text
 ┌──────────────────────┐      ┌───────────────────┐     ┌──────────────────────┐
 │ GitHub Actions cron  │ ───► │ Claude API (Opus) │ ──► │ PR opened on repo    │
 │  (e.g. weekly Mon)   │      │  topic → draft    │     │  with new .md file   │
@@ -28,6 +28,7 @@ Goal: keep the blog fresh without Semsudin manually writing every post, while ke
 ### Components
 
 1. **Topic queue** — `content/blog/_topics.yaml` seeded monthly with ~4–8 topic ideas. Each entry:
+
    ```yaml
    - slug: "self-healing-tests-cost-analysis"
      angle: "Real numbers on what AI-driven QA saves a 10-engineer team"
@@ -90,13 +91,14 @@ After the brand site has been live for 4–8 weeks, once Semsudin has written 2�
 
 ## Phase 4 — Social proof layer
 
-- Testimonials from former clients/colleagues (ask Alfa Laval, System Verification, Mars Petcare contacts if willing)
+- Testimonials from former clients/colleagues (ask Alfa Laval, Mars Petcare, APCOA, ERS contacts if willing)
 - Case study PDFs for download (gated or ungated)
 - Speaking / podcast appearances (actively pitch QA and GenAI podcasts)
 
 ## Phase 5 — Productized offers
 
 If consulting demand exceeds capacity, productize:
+
 - "AI Readiness Audit" — 2-week paid engagement → written architecture review
 - "QA Transformation Sprint" — 4-week bootstrap to get AI-driven QA running
 - "Fractional AI Architect" — recurring monthly retainer
